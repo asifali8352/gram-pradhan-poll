@@ -2,9 +2,12 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import os
-from datetime import datetime
 import hashlib
 import re
+import pytz
+from datetime import datetime
+IST = pytz.timezone('Asia/Kolkata')
+
 
 # Set page configuration
 st.set_page_config(
@@ -371,3 +374,4 @@ if not votes_df.empty and len(votes_df) > 0:
             st.success(f"✅ सभी वोट अलग फोन नंबर से हैं! ({unique_phones} unique phones)")
         else:
             st.warning(f"⚠️ संभावित डुप्लिकेट मिले: {total_votes_count - unique_phones}")
+
