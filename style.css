@@ -1,0 +1,148 @@
+/* 1. Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/* 2. Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, .stApp {
+  font-family: 'Rubik', sans-serif;
+  background: #f4f6f8;
+  color: #2c3e50;
+}
+
+/* 3. Header Styles */
+.main-header {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #34495e;
+  text-align: center;
+  padding: 1rem 0;
+  background: #ffffff;
+  border-bottom: 4px solid #2980b9;
+}
+.sub-header {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+/* 4. Card Containers */
+.vote-card, .result-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vote-card:hover, .result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* 5. Buttons */
+.stButton>button {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.stButton>button:hover {
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  transform: translateY(-2px);
+}
+.stButton>button[kind="secondary"] {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+.stButton>button[kind="secondary"]:hover {
+  background: #d0d3d4;
+}
+
+/* 6. Radio & Inputs */
+.stRadio>div, .stTextInput, .stTextInput>div>div>input {
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+.stRadio>div {
+  background: #ecf0f1;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+}
+.stRadio>div:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.stTextInput>div>div>input {
+  border: 2px solid #bdc3c7;
+  padding: 0.6rem 1rem;
+}
+.stTextInput>div>div>input:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 8px rgba(41,128,185,0.2);
+}
+
+/* 7. Messages */
+.stInfo, .stError, .stSuccess, .stWarning {
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-weight: 500;
+}
+.stSuccess { background: #2ecc71; color: #fff; }
+.stError   { background: #e74c3c; color: #fff; }
+.stInfo    { background: #3498db; color: #fff; }
+.stWarning { background: #f39c12; color: #fff; }
+
+/* 8. Metrics */
+.metric-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 0.5rem;
+}
+.metric-container h1 { font-size: 2rem; color: #2980b9; }
+.metric-container h2 { font-size: 1rem; color: #7f8c8d; }
+
+/* 9. Chart Wrapper */
+.chart-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: 1rem 0;
+}
+
+/* 10. Footer */
+.footer-container {
+  background: #34495e;
+  color: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 0 0 12px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer-container a {
+  color: #6dd5fa;
+  text-decoration: none;
+}
+
+/* 11. Hide Default Menu */
+#MainMenu, footer, header { visibility: hidden; }
+
+/* 12. Responsive */
+@media (max-width: 768px) {
+  .main-header { font-size: 2rem; }
+  .vote-card, .result-card { padding: 1rem; }
+  .stButton>button { width: 100%; padding: 0.6rem 0; }
+}
